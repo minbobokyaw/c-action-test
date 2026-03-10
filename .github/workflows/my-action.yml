@@ -10,17 +10,17 @@ jobs:
           run: echo "Hello, Github actions!"
 
 
-    needs: [say-hello]
-    runs-on: ubuntu-latest
-    steps:
+      needs: [say-hello]
+      runs-on: ubuntu-latest
+      steps:
 
-      - name: Check out this repo 
-        uses: actions/checkout@v6
+        - name: Check out this repo 
+          uses: actions/checkout@v6
 
-      - name: Install dependencies 
-        run: sudo apt install -y build-essential python3 
+        - name: Install dependencies 
+          run: sudo apt install -y build-essential python3 
 
-      - run: pwd
+        - run: pwd
 
-      - name: Run test 
-        run: python3 test.py 
+        - name: Run test 
+          run: python3 test.py 
