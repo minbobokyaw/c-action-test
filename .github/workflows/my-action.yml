@@ -9,7 +9,7 @@ jobs:
         - name: Say hello
           run: echo "Hello, Github actions!"
 
-
+    build-and-test:
       needs: [say-hello]
       runs-on: ubuntu-latest
       steps:
